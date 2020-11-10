@@ -10,7 +10,9 @@ const blogposts = db.collection("blogposts");
 
 router.get("/", (req, res) => {
     // Inside this arrow funciton, we can do anything we want as long as we return at the end
-    blogposts.get()
+    const blogpostsArray = [];
+    blogposts
+    .get()
     .then((querySnapshot) => {
         //loop through quert snapshot and push into array
         console.log("querySnapshot", querySnapshot);
