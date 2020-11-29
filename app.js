@@ -18,9 +18,9 @@ const firebase = require("firebase");
 firebase.initializeApp(firebaseConfig);
 
 //Routes Import
-const indexRoute = require("./routes/index.js");
-const postRoute = require("./routes/post.js");
-const createRoute = require("./routes/createBlogpost.js");
+const indexRoute = require("./route/index.js");
+const postRoute = require("./route/post.js");
+const createRoute = require("./route/createBlogpost.js");
 //Routes
 app.use("/", indexRoute);
 app.use("/post", postRoute);
